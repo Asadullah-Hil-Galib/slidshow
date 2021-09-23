@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: #006266;
+}
+.slidShow{
+   margin: 0 auto;
+   padding-top: 50px;
+   height: 600px;
+   width: 100%;
+   background: #FFC312;
+   box-sizing: border-box;
+}
+
+.entiareContent{
+    margin: auto;
+    width: 190px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px;
+}
+.contentCarousel{
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotated 30s infinite linear;
+    transform-style: preserve-3d;
+}
+.contentCarousel figure{
+    width: 100%;
+    height: 130px;
+    border: 2px solid #888;
+    position: absolute;
+    box-shadow: 0px 0px 10px 10px #ff0000;
+    animation: boxShadow 5s infinite linear alternate;
+}
+@keyframes boxShadow {
+        12%{box-shadow: 0px 0px 10px 10px #ff0000;}
+        24%{box-shadow: 0px 0px 10px 10px #ffee00;}
+        39%{box-shadow: 0px 0px 10px 10px #33ff00;}
+        55%{box-shadow: 0px 0px 10px 10px #00ffc8;}
+        70%{box-shadow: 0px 0px 10px 10px #004cff;}
+        85%{box-shadow: 0px 0px 10px 10px #ff00f2;}
+        100%{box-shadow: 0px 0px 10px 10px #000000;}
+}
+.contentCarousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(2) {
+    transform: rotateY(30deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(3) {
+    transform: rotateY(60deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(4) {
+    transform: rotateY(90deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(5) {
+    transform: rotateY(120deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(6) {
+    transform: rotateY(150deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(7) {
+    transform: rotateY(180deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(8) {
+    transform: rotateY(210deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(9) {
+    transform: rotateY(240deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(10) {
+    transform: rotateY(270deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(11) {
+    transform: rotateY(300deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(12) {
+    transform: rotateY(330deg) translateZ(400px);
+}
+.contentCarousel figure:nth-child(13) {
+    transform: rotateY(360deg) translateZ(400px);
+}
+
+.shadow{
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #222;
+    border-radius: 4px;
+}
+.contentCarousel img{
+    image-rendering: auto;
+    transition: all 200ms;
+    width: 100%;
+    height: 100%;
+}
+.contentCarousel img:hover {
+	transform: scale(160%);
+	z-index: 1;
+    border: 7px dotted red;
+    border-left-color: green;
+    border-right-color: green;
+}
+@keyframes rotated {
+        0%{
+            transform: rotateY(0deg);
+        }
+        100%{
+            transform: rotateY(360deg);
+        }
+}
